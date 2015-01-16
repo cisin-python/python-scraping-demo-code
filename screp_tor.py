@@ -44,7 +44,7 @@ class ScrapeMethod():
         return soup
 
     def Pastebin(self):
-        url = 'http://pastebin.ca'
+        url = 'http://abc.ca'
         soupData = self.GetAlldata(url)
         recentPost = soupData.find(id="idmenurecent").find_all("a")
         allLinks = []
@@ -53,7 +53,7 @@ class ScrapeMethod():
         return allLinks
 
     def Quickleak(self):
-        url = 'https://www.quickleak.org/last-pastes.html'
+        url = 'https://abc.org/last-pastes.html'
         puturl = '/'.join(url.split('/')[:-1])
         soupData = self.GetAlldata(url)
         table = soupData.find("table", {"id": "example"})
