@@ -94,7 +94,7 @@ class ScrapeMethod():
             self.get_type(i)
 
     def anom(self):
-        url = 'http://doxbinrqbk7lcslw.onion/archive.php'
+        url = 'http://abc.com/archive.php'
         soup = self.get_alldata(url, soup_obj=False)
         linklist = self.driver.find_elements_by_tag_name('a')
         return self.driver_all_href(linklist)
@@ -110,7 +110,7 @@ class ScrapeMethod():
 
     def onionweb(self, NUM=1900):
         while NUM < 2850:
-            url = "http://3fnhfsfc2bpzdste.onion/index.php?a=download&q=%s" % NUM
+            url = "http://abc.com/index.php?a=download&q=%s" % NUM
             soap = self.get_alldata(url, soup_obj=False)
             lst = self.driver_all_href(self.driver_get_all_link())
             for i in lst:
