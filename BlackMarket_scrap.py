@@ -43,7 +43,7 @@ class ScrapeMethod():
         return lambda link: url + link.attrs['href']
 
     def BlackMarket(self):
-        url = 'http://jppcxclcwvkbh3xi.onion/messages/'
+        url = 'http://abc.com/messages/'
         soupData = self.GetAlldata(url)
         self.driver.find_element_by_xpath("//div[@class='quarterContent']//a").click()
         allLinks = soupData.find_all('a', text=re.compile(".html"))
